@@ -11,9 +11,9 @@ function MyApp({ Component, pageProps }) {
   }, []);
   return(
     <>
-    <Layout>
-    </Layout>
-        <Component {...pageProps} />
+      <Layout Children={<Component {...pageProps} />}>
+      </Layout>
+
     </>
   )
 }

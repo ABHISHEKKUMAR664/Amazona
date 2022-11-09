@@ -8,12 +8,13 @@ import {
     Container,
     Link,
 } from '@material-ui/core';
-export default function Navbar() {
+export default function Navbar({ title, description}) {
     const classes = useStyles();
     return (
         <div>
             <Head>
-                <title>Next Amazona</title>
+                <title>{title ? `${title} - Next Amazona` : 'Next Amazona'}</title>
+                {description && <meta name="description" content={description}></meta>}
             </Head>
             <AppBar position="static" className={classes.navbar}>
                 <Toolbar>

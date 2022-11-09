@@ -3,10 +3,10 @@ import Footer from './Footer';
 import useStyles from '../utils/styles';
 
 
-export default function Layout({ Children }){
+export default function Layout({ title, description, Children }){
     return (
       <>
-      <Navbar />
+        <Navbar title={title} description={description} />
         {Children}
        
       </>
